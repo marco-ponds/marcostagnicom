@@ -1,18 +1,22 @@
 import React from 'react';
 import Layout from '../app/Layout';
-import Main from '../app/Main';
+import Form from '../app/Form';
 
 import "antd/dist/antd.min.css";
 
-class Index extends React.Component {
+class Whoami extends React.Component {
+
+    constructor(props) {
+        super(props);
+    }
 
     render() {
         return (
             <Layout>
-                <Main />
+                <Form/>
             </Layout>
         )
     }
 }
 
-export default Index;
+export default Whoami;

@@ -5,11 +5,11 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 
-export default () => {
+export default ({ children }) => {
     return (
         <div className="main-wrapper">
             <Header/>
-            <Main />
+            { children }
             <Footer/>
         </div>
     );
