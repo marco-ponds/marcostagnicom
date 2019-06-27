@@ -28,19 +28,11 @@ jobs:
                 name: build
                 command: 'npm run build'
             - run:
-                name: remove dev dependencies
-                command: 'npm prune --production'
-            - run:
-                name: push new version
-                command: echo ${CIRCLE_BUILD_NUM}
-            - store_artifacts:
-                path: test-results.xml
-                prefix: tests
+                name: tag new version
+                command: git tag -a v${CIRCLE_BUILD_NUM} && git push --tags --no-verify
             - store_artifacts:
                 path: coverage
                 prefix: coverage
-            - store_test_results:
-                path: test-results.xml
 
 
     deploy:
