@@ -31,11 +31,8 @@ jobs:
                 name: remove dev dependencies
                 command: 'npm prune --production'
             - run:
-                name: create build number
-                command: 'npm version minor'
-            - run:
                 name: push new version
-                command: 'git push --no-verify && git push --tags --no-verify'
+                command: echo ${CIRCLE_BUILD_NUM}
             - store_artifacts:
                 path: test-results.xml
                 prefix: tests
