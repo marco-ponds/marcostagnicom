@@ -27,13 +27,19 @@ jobs:
             - run:
                 name: build
                 command: 'npm run build'
-            - run:
-                name: tag new version
-                command: git tag -a v${CIRCLE_BUILD_NUM} && git push --tags --no-verify
             - store_artifacts:
                 path: coverage
                 prefix: coverage
 
+    publish_release:
+        docker:
+            - image: cibuilds/github:0.10
+        steps:
+            - run:
+                name: "Publish Release on GitHub"
+                command: |
+                    go get github.com/tcnksm/ghr
+                    ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${CIRCLE_BUILD_NUM} ./
 
     deploy:
         machine:
@@ -48,9 +54,12 @@ workflows:
     build-and-deploy:
         jobs:
             - build
-            - deploy:
+            - publish_release:
                 requires:
                     - build
+            - deploy:
+                requires:
+                    - publish_release
                 filters:
                     branches:
                         only: master
