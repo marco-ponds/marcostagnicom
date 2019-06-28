@@ -39,7 +39,9 @@ jobs:
                   command: ls
             - run:
                 name: "Zip"
-                command: zip -r build/app.zip ./
+                command: |
+                    mkdir build
+                    zip -r build/app.zip ./
             - run:
                 name: "Publish Release on GitHub"
                 command: |
