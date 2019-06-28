@@ -41,7 +41,7 @@ jobs:
                 name: "Publish Release on GitHub"
                 command: |
                     go get github.com/tcnksm/ghr
-                    ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${CIRCLE_BUILD_NUM}
+                    ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${CIRCLE_BUILD_NUM} build-${CIRCLE_BUILD_NUM} ./
 
     deploy:
         machine:
