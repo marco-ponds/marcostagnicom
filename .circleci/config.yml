@@ -36,10 +36,13 @@ jobs:
             - image: circleci/golang:1.8
         steps:
             - run:
+                name: "Zip"
+                command: zip -r build/app.zip ./
+            - run:
                 name: "Publish Release on GitHub"
                 command: |
                     go get github.com/tcnksm/ghr
-                    ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete build-${CIRCLE_BUILD_NUM} ./
+                    ghr -t ${GITHUB_TOKEN} v${CIRCLE_BUILD_NUM} build/
 
     deploy:
         machine:
