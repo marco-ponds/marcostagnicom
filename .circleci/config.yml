@@ -65,7 +65,8 @@ jobs:
         steps:
             - run:
                 name: Deploy Over SSH
-                command: 'echo deploy'
+                command: |
+                    ssh -o "StrictHostKeyChecking no" $SSH_USER@$SSH_HOST "ls"
 
 workflows:
     version: 2
