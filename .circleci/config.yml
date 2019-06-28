@@ -30,28 +30,34 @@ jobs:
             - run:
                 name: remove dev dependencies
                 command: npm prune --production
-            - store_artifacts:
-                path: coverage
-                prefix: coverage
-
-    publish_release:
-        working_directory: ~/marcostagnicom
-        docker:
-            - image: circleci/golang:1.12
-        steps:
-            - run:
-                  name: what is inside this folder
-                  command: ls
             - run:
                 name: "Zip"
                 command: |
                     mkdir build
                     zip -r build/app.zip ./
+            - persist_to_workspace:
+                  root: build
+                  # Must be relative path from root
+                  paths:
+                      - app.zip
+            - store_artifacts:
+                path: coverage
+                prefix: coverage
+
+    publish_release:
+        docker:
+            - image: circleci/golang:1.12
+        steps:
+            - attach_workspace:
+                  at: build
             - run:
-                name: "Publish Release on GitHub"
-                command: |
-                    go get github.com/tcnksm/ghr
-                    ghr -t ${GITHUB_TOKEN} v${CIRCLE_BUILD_NUM} build/
+                  name: what is inside this folder
+                  command: ls
+#            - run:
+#                name: "Publish Release on GitHub"
+#                command: |
+#                    go get github.com/tcnksm/ghr
+#                    ghr -t ${GITHUB_TOKEN} v${CIRCLE_BUILD_NUM} build/
 
     deploy:
         machine:
