@@ -4,6 +4,7 @@ jobs:
         working_directory: ~/marcostagnicom
         docker:
             - image: circleci/node:8.12.0
+            - image: circleci/golang:1.8
         steps:
             - checkout
             - run:
@@ -33,14 +34,9 @@ jobs:
             - store_artifacts:
                 path: coverage
                 prefix: coverage
-
-    publish_release:
-        docker:
-            - image: circleci/golang:1.8
-        steps:
             - run:
-                name: what is inside this folder
-                command: ls
+                  name: what is inside this folder
+                  command: ls
             - run:
                 name: "Zip"
                 command: zip -r build/app.zip ./
@@ -63,12 +59,9 @@ workflows:
     build-and-deploy:
         jobs:
             - build
-            - publish_release:
-                requires:
-                    - build
             - deploy:
                 requires:
-                    - publish_release
+                    - build
                 filters:
                     branches:
                         only: master
