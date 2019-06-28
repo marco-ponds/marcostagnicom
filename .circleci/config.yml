@@ -66,9 +66,12 @@ workflows:
     build-and-deploy:
         jobs:
             - build
+            - publish_release:
+                  requires:
+                      - build
             - deploy:
-                requires:
-                    - build
-                filters:
-                    branches:
-                        only: master
+                  requires:
+                      - publish_release
+                  filters:
+                      branches:
+                          only: master
