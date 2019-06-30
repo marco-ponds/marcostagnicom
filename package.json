@@ -8,6 +8,7 @@
     "dev:inspect": "node --inspect server/index",
     "build": "next build",
     "start": "NODE_ENV=production node server/index",
+    "production": "npm run build && npm start",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors"

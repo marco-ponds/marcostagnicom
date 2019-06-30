@@ -27,9 +27,9 @@ jobs:
             - run:
                 name: build
                 command: 'npm run build'
-            #- run:
-            #    name: remove dev dependencies
-            #    command: npm prune --production
+            - run:
+                name: remove dev dependencies
+                command: rm -rf node_modules
             - run:
                 name: "Zip"
                 command: |
