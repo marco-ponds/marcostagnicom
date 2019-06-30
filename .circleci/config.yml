@@ -85,7 +85,12 @@ jobs:
                 name: Deploy Over SSH
                 command: |
                     BUILD_VERSION=`cat build/VERSION`
-                    ssh -o "StrictHostKeyChecking no" -v $SSH_USER@$SSH_HOST "cd /var/www/marcostagni.com && git fetch --all && git checkout tags/$BUILD_VERSION"
+                    ssh -o "StrictHostKeyChecking no" -v $SSH_USER@$SSH_HOST "
+                        cd /var/www/marcostagni.com &&
+                        find . -type f -delete &&
+                        find . -type d -delete &&
+                        curl -O -J -L https://github.com/marco-ponds/marcostagnicom/releases/download/$BUILD_VERSION/app.zip &&
+                        unzip -o app.zip"
 
 workflows:
     version: 2
