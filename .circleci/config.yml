@@ -27,9 +27,9 @@ jobs:
             - run:
                 name: build
                 command: 'npm run build'
-            - run:
-                name: remove dev dependencies
-                command: npm prune --production
+            #- run:
+            #    name: remove dev dependencies
+            #    command: npm prune --production
             - run:
                 name: "Zip"
                 command: |
@@ -90,7 +90,8 @@ jobs:
                         find . -type f -delete &&
                         find . -type d -delete &&
                         curl -O -J -L https://github.com/marco-ponds/marcostagnicom/releases/download/$BUILD_VERSION/app.zip &&
-                        unzip -o app.zip"
+                        unzip -o app.zip
+                        sh infra/deploy.sh"
 
 workflows:
     version: 2
