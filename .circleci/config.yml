@@ -87,8 +87,7 @@ jobs:
                     BUILD_VERSION=`cat build/VERSION`
                     ssh -o "StrictHostKeyChecking no" -v $SSH_USER@$SSH_HOST "
                         cd /var/www/marcostagni.com &&
-                        find . -type f -delete &&
-                        find . -type d -delete &&
+                        find . -mindepth 1 -delete
                         curl -O -J -L https://github.com/marco-ponds/marcostagnicom/releases/download/$BUILD_VERSION/app.zip &&
                         unzip -o app.zip
                         sh infra/deploy.sh"
