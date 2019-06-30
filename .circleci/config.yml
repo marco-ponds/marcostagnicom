@@ -64,6 +64,13 @@ jobs:
                     BUILD_VERSION=`cat build/VERSION`
                     rm build/VERSION
                     ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} $BUILD_VERSION build/
+                    rm build/app.zip
+                    echo $BUILD_VERSION > build/VERSION
+            - persist_to_workspace:
+                  root: build
+                  # Must be relative path from root
+                  paths:
+                      - VERSION
 
     deploy:
         machine:
@@ -72,10 +79,13 @@ jobs:
             - add_ssh_keys:
                 fingerprints:
                     - "70:ef:a2:55:4f:82:5b:31:b8:53:38:ec:93:e0:e9:48"
+            - attach_workspace:
+                at: build
             - run:
                 name: Deploy Over SSH
                 command: |
-                    ssh -o "StrictHostKeyChecking no" -v $SSH_USER@$SSH_HOST "ls"
+                    BUILD_VERSION=`cat build/VERSION`
+                    ssh -o "StrictHostKeyChecking no" -v $SSH_USER@$SSH_HOST "cd /var/www/marcostagni.com && git fetch --all && git checkout tags/$BUILD_VERSION"
 
 workflows:
     version: 2
