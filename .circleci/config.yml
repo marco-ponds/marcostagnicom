@@ -35,11 +35,15 @@ jobs:
                 command: |
                     mkdir build
                     zip -r build/app.zip ./
+            - run:
+                name: dumping version into file
+                command: echo v${CIRCLE_BUILD_NUM} > build/VERSION
             - persist_to_workspace:
                   root: build
                   # Must be relative path from root
                   paths:
                       - app.zip
+                      - VERSION
             - store_artifacts:
                 path: coverage
                 prefix: coverage
@@ -57,7 +61,9 @@ jobs:
                 name: "Publish Release on GitHub"
                 command: |
                     go get github.com/tcnksm/ghr
-                    ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} v${CIRCLE_BUILD_NUM} build/
+                    BUILD_VERSION=`cat build/VERSION`
+                    rm build/VERSION
+                    ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} $BUILD_VERSION build/
 
     deploy:
         machine:
