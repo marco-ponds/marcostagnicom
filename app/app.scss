@@ -149,6 +149,19 @@ body {
     width: 100%;
     margin: 0;
     padding: 8px 24px;
+    z-index: 11;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    border-left: 20vw solid #181818;
+    border-bottom: 100vh solid #181818;
+    border-right: 65vw solid transparent;
 }
 
 main {

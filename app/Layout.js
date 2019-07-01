@@ -7,10 +7,13 @@ import Footer from './Footer';
 
 export default ({ children }) => {
     return (
-        <div className="main-wrapper">
-            <Header/>
-            { children }
-            <Footer/>
+        <div>
+            <div className='triangle' />
+            <div className="main-wrapper">
+                <Header/>
+                { children }
+                <Footer/>
+            </div>
         </div>
     );
 };

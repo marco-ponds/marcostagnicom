@@ -1,8 +1,9 @@
 import React from 'react';
+import Console from './Console';
 
 const Main = (props) => (
     <main>
-        something goes here
+        <Console />
     </main>
 );
 

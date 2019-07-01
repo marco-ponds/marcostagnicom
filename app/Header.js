@@ -10,7 +10,7 @@ const Header = () => (
         <ul className="menu">
             <li>projects</li>
             <li><a target="_blank" href='http://blog.marcostagni.com'>blog</a></li>
-            <li><a href='/whoami'>whoami</a></li>
+            <li><a href='/contacts'>contacts</a></li>
         </ul>
     </header>
 );
