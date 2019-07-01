@@ -24,10 +24,14 @@ const Console = () => {
                 <li><Icon type="plus" /></li>
             </ul>
             <Terminal
-                className='console-content'
+                className='console-window'
+                contentClassName='console-content'
+                inputAreaClassName='console-input'
                 commands={commands}
-                welcomeMessage={'Welcome to the React terminal!'}
-                promptLabel={'me@React:~$'}
+                welcomeMessage={'Welcome!'}
+                disableOnProcess
+                autoFocus
+                promptLabel={'guest@marcostagni.com:~$'}
             />
         </div>
     </div>

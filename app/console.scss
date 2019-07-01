@@ -42,9 +42,21 @@
             }
         }
 
-        & .console-content {
+        & .console-window {
             background: #0e0e0e !important;
             min-height: auto !important;
+        }
+
+        & .console-input {
+
+            & span {
+                color: #ffce54 !important;
+            }
+
+            & input {
+                color: white !important;
+                padding: 4px 0px 0px 8px !important;
+            }
         }
     }
 }
