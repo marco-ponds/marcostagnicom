@@ -43,7 +43,7 @@ class Console extends React.Component {
                 return Math.random();
             }
         }
-    })
+    });
 
     render() {
         return <div className='console-container'>
@@ -62,6 +62,7 @@ class Console extends React.Component {
                     welcomeMessage={'Welcome!'}
                     disableOnProcess
                     autoFocus
+                    errorText={'I couldn\'t find a command called [command]! Type help if you\'re confused.'}
                     promptLabel={'guest@marcostagni.com:~$'}
                 />
             </div>
