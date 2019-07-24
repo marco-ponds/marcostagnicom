@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../app/Layout';
 import FormComponent from '../app/FormComponent';
-
+import GoogleAnalytics from '../app/GoogleAnalytics';
 import "antd/dist/antd.min.css";
 
 class Whoami extends React.Component {
@@ -12,9 +12,12 @@ class Whoami extends React.Component {
 
     render() {
         return (
-            <Layout>
-                <FormComponent/>
-            </Layout>
+            <React.Fragment>
+                <GoogleAnalytics/>
+                <Layout>
+                    <FormComponent/>
+                </Layout>
+            </React.Fragment>
         )
     }
 }
