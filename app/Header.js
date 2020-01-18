@@ -8,7 +8,8 @@ const Header = () => (
             <a href='/'>Marco</a>
         </span>
         <ul className="menu">
-            <li>projects</li>
+            <li><a href='/resume'>resume</a></li>
+            <li><a href='/projects'>projects</a></li>
             <li><a target="_blank" href='http://blog.marcostagni.com'>blog</a></li>
             <li><a href='/contacts'>contacts</a></li>
         </ul>

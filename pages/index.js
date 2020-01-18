@@ -9,12 +9,12 @@ class Index extends Component {
 
     render() {
         return (
-            <React.Fragment>
-                <GoogleAnalytics/>
+            <div>
+                <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
                 <Layout>
                     <Main />
-                </Layout>
-            </React.Fragment>
+                    </Layout>
+            </div>
         )
     }
 }

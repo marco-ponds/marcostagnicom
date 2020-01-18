@@ -24,7 +24,15 @@ const onWildcard = function(req, res) {
     return handle(req, res, req.url);
 };
 
+const onResume = function(req, res, next) {
+    const filePath = './static/MarcoStagni_resume_latest.pdf';
+    return res.download(filePath, 'MarcoStagni_resume.pdf');
+
+    next();
+}
+
 const setupServer = function() {
+    server.get('/resume', onResume);
     server.get('*', onWildcard);
 
     // Running the server
