@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Layout from '../app/Layout';
-import Main from '../app/main/Main';
+import ProjectsList from '../app/projects/Projects';
 
 import "antd/dist/antd.min.css";
 
-class Index extends Component {
+class Projects extends React.Component {
 
     render() {
         return (
             <div>
                 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
                 <Layout>
-                    <Main />
+                    <ProjectsList />
                 </Layout>
             </div>
         )
     }
 }
 
-export default Index;
+export default Projects;
