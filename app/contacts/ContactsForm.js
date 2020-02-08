@@ -158,7 +158,7 @@ class RegistrationForm extends React.Component {
             ],
           })(<Input />)}
         </Form.Item>
-        
+
         <Form.Item
           label={
             <span>
@@ -217,9 +217,7 @@ const FormComponent = (props) => {
 
     console.log(WrappedRegistrationForm, RegistrationForm);
 
-    return <main>
-        <WrappedRegistrationForm />
-    </main>;
+    return <WrappedRegistrationForm />
 };
 
 export default FormComponent;

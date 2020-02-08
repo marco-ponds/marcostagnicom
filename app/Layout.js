@@ -6,14 +6,14 @@ import Map from './Map';
 import Footer from './footer/Footer';
 import Canvas from '../app/Canvas';
 
-export default ({ children }) => {
+export default ({ children, homepage = false }) => {
     return (
         <div>
             <Map />
             <div className='triangle' />
             <Canvas />
             <div className="main-wrapper">
-                <Header/>
+                <Header homepage={homepage}/>
                 { children }
                 <Footer/>
             </div>

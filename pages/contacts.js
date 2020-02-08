@@ -1,22 +1,11 @@
 import React from 'react';
 import Layout from '../app/Layout';
-import ContactsForm from '../app/ContactsForm';
+import Contacts from '../app/contacts/Contacts';
 
 import "antd/dist/antd.min.css";
 
-class Contacts extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <Layout>
-                <ContactsForm/>
-            </Layout>
-        )
-    }
-}
-
-export default Contacts;
+export default () => (
+    <Layout>
+        <Contacts/>
+    </Layout>
+);

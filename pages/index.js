@@ -10,7 +10,7 @@ class Index extends Component {
         return (
             <div>
                 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
-                <Layout>
+                <Layout homepage={true}>
                     <Main />
                 </Layout>
             </div>

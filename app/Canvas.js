@@ -19,7 +19,7 @@ export default class Canvas extends Component {
         this.canvas.width = WIDTH;
 
         this.context = this.canvas.getContext('2d');
-        this.draw();
+        //this.draw();
     }
 
     draw = () => {

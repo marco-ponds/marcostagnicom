@@ -1,0 +1,49 @@
+.contacts {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    overflow: hidden;
+
+    & * {
+        color: #dcdcdd;
+    }
+
+    & h1 {
+        font-weight: bold;
+        font-size: 2.5em;
+        color: #ffce54;
+    }
+
+    & .contacts-details-container,
+    & .contacts-form-container {
+        color: #dcdcdd;
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        padding: 120px 0 32px 0;
+        float: left;
+    }
+
+    & .contacts-details-container {
+        padding-right: 64px;
+    }
+
+    & .contacts-links {
+        margin: 0;
+        padding: 0;
+
+        & .link {
+            list-style: none;
+            float: left;
+            height: auto;
+            width: auto;
+            padding: 4px;
+            font-size: 32px;
+
+            &:hover svg {
+                fill: #ffce54;
+            }
+        }
+    }
+}
