@@ -252,7 +252,7 @@ canvas {
 
 main {
     height: calc(100% - 140px);
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 .projectslist {

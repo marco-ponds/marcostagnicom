@@ -11,7 +11,7 @@ const Header = ({ homepage = true }) => (
         }
         <ul className="menu">
             <li><a href='/resume'>resume</a></li>
-            <li><a href='/projects'>work</a></li>
+            <li><a href='/work'>work</a></li>
             <li><a href='/projects'>projects</a></li>
             <li><a target="_blank" href='http://blog.marcostagni.com'>blog</a></li>
             <li><a href='/contacts'>contacts</a></li>

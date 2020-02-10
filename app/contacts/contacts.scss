@@ -30,7 +30,7 @@
     }
 
     & .contacts-links {
-        margin: 0;
+        margin: 32px 0px;
         padding: 0;
 
         & .link {
@@ -39,10 +39,44 @@
             height: auto;
             width: auto;
             padding: 4px;
-            font-size: 32px;
+            margin-right: 16px;
+            font-size: 24px;
 
             &:hover svg {
                 fill: #ffce54;
+            }
+        }
+    }
+
+
+    & .contacts-form {
+        padding: 52px;
+        background: rgba(24, 24, 24, 0.5);
+
+        & * {
+            font-family: Montserrat;
+        }
+
+        & .contacts-input {
+            margin-bottom: 42px;
+            background: transparent;
+            color: #dcdcdd !important;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid rgba(255, 206, 84, .4);
+            border-left: 1px solid rgba(255, 206, 84, .4);
+        }
+
+        & .contacts-button {
+            border: 1px solid #ffce54;
+
+            & span {
+                font-weight: 100;
+                color: #ffce54;
+            }
+
+            &:hover {
+                background: rgba(255, 206, 84, .1) !important;
             }
         }
     }

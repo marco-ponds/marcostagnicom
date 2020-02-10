@@ -20,9 +20,9 @@ const ContactsDetails = () => (
                     <Icon type="codepen"/>
                 </a>
             </li>
-            <li className="link"><Icon height={"2em"} width={"2em"} type="github" /></li>
-            <li className="link"><Icon height={32} width={32} type="linkedin" /></li>
-            <li className="link"><Icon height={32} width={32} type="instagram" /></li>
+            <li className="link"><Icon type="github" /></li>
+            <li className="link"><Icon type="linkedin" /></li>
+            <li className="link"><Icon type="instagram" /></li>
         </ul>
     </p>
 );
