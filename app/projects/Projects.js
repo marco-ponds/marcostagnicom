@@ -1,37 +1,14 @@
 import React from 'react';
-import Project from './Project';
+import ProjectsList from './ProjectsList';
+import ProjectsDetails from './ProjectsDetails';
 
-const PROJECTS = [
-    {
-        name: 'Pathfinding demo',
-        url: 'http://pathfinding.marcostagni.now.sh',
-        cover: './static/images/pathfinding.png',
-        description: 'A* pathfinding demo realised with mage engine.'
-    },
-    {
-        name: 'Pathfinding demo',
-        url: 'http://pathfinding.marcostagni.now.sh',
-        cover: './static/images/pathfinding.png',
-        description: 'A* pathfinding demo realised with mage engine.'
-    },
-    {
-        name: 'Pathfinding demo',
-        url: 'http://pathfinding.marcostagni.now.sh',
-        cover: './static/images/pathfinding.png',
-        description: 'A* pathfinding demo realised with mage engine.'
-    },
-    {
-        name: 'Pathfinding demo',
-        url: 'http://pathfinding.marcostagni.now.sh',
-        cover: './static/images/pathfinding.png',
-        description: 'A* pathfinding demo realised with mage engine.'
-    }
-]
+import './projects.scss';
 
 export default () => (
     <main>
-        <div className='projectslist' >
-            { PROJECTS.map(p => <Project {...p} />)}
+        <div className='projects'>
+            <ProjectsDetails />
+            <ProjectsList />
         </div>
     </main>
 )

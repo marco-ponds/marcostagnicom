@@ -254,14 +254,3 @@ main {
     height: calc(100% - 140px);
     overflow: hidden;
 }
-
-.projectslist {
-    margin: 0;
-    padding: 32px 0px;
-
-    & .ant-card {
-        position: relative;
-        float: left;
-        margin: 16px;
-    }
-}

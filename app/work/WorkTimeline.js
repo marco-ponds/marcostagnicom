@@ -33,8 +33,17 @@ const experiences = [
     },
     {
         current: false,
+        position: 'Front-End Engineer (internship)',
+        date: 'September 2015 - April 2016',
+        company: 'Expert System SPA',
+        description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque\n' +
+            'laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto\n' +
+            'beatae vitae dicta sunt explicabo.'
+    },
+    {
+        current: false,
         position: 'Front-End and Mobile Developer',
-        date: 'November 2012 - June 2014',
+        date: 'November 2013 - June 2014',
         company: 'Playwear - Moovi',
         description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque\n' +
             'laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto\n' +
