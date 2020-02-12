@@ -21,12 +21,22 @@
         width: 50%;
         height: 100%;
         margin: 0;
-        padding: 120px 0 32px 0;
+        padding: 100px 0 32px 0;
         float: left;
     }
 
     & .contacts-details-container {
         padding-right: 64px;
+    }
+
+    & .contacts-linkedin-badge {
+        & .LI-badge-container {
+            width: 100% !important;
+            /* left: calc(50% - 170px); */
+            /* margin: 24px; */
+            top: 24px;
+            position: relative;
+        }
     }
 
     & .contacts-links {

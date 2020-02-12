@@ -17,13 +17,12 @@
         color: #ffce54;
     }
 
-    & .work-details-container,
-    & .work-form-container {
+    & .work-details-container {
         color: #dcdcdd;
         width: 50%;
         height: 100%;
         margin: 0;
-        padding: 120px 64px 32px 0;
+        padding: 100px 64px 32px 0;
         float: left;
     }
 }
@@ -33,7 +32,7 @@
     height: 100%;
     margin: 0;
     float: left;
-    padding: 120px 0 72px 0;
+    padding: 100px 0 72px 0;
     overflow-y: auto;
 
     @include dark-scrollbar;
@@ -76,4 +75,3 @@
     }
 
 }
-

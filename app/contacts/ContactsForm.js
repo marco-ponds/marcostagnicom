@@ -21,7 +21,7 @@ class ContactsForm extends Component {
                     <Input className={'contacts-input'} name='name' placeholder="Your name" />
                     <Input className={'contacts-input'} name='email' type="email" placeholder="Your email" />
                     <Input className={'contacts-input'} name='subject' placeholder="Your subject" />
-                    <TextArea className={'contacts-input'} name='message' placeholder="Your message goes here" rows={8} />
+                    <TextArea className={'contacts-input'} name='message' placeholder="Your message" rows={4} />
                     <Button className={'contacts-button'} htmlType="submit" ghost>send</Button>
                 </form>
             </div>

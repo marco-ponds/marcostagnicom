@@ -55,6 +55,10 @@ header {
             color: inherit;
             height: inherit;
             display: block;
+
+            &.current {
+                color: #ffce54;
+            }
         }
 
         &:last-child {

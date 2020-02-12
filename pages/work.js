@@ -5,7 +5,7 @@ import Work from '../app/work/Work';
 import "antd/dist/antd.min.css";
 
 export default () => (
-    <Layout>
+    <Layout currentPage='work'>
         <Work/>
     </Layout>
 );
