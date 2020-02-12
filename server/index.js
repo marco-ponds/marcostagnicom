@@ -26,8 +26,15 @@ const onListenComplete = function() {
 const onWildcard = function(req, res) {  return handle(req, res, req.url); };
 const onResume = function(req, res) { return res.download(RESUME_PATH, RESUME_FILENAME); };
 
+const onMail = function(req, res) {
+    console.log(req.body);
+
+    return 'hello';
+};
+
 const setupServer = function() {
     server.get('/resume', onResume);
+    server.post('/email', onMail);
     server.get('*', onWildcard);
 
     // Running the server

@@ -12,6 +12,9 @@ const ContactsDetails = () => (
             Feel free to drop me a message, I promise you I will find the time to read and reply every time.
             In the meanwhile, here are all the other platforms where you can find me:
         </span>
+        <ul>
+            lascia solo i link a linkedin, rimuovi il resto, sistema form.
+        </ul>
         <ul className='contacts-links'>
             <li className="link">
                 <a

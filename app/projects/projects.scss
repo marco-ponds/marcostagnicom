@@ -36,5 +36,13 @@
         position: relative;
         float: left;
         margin: 16px;
+        background: transparent;
+        border: 1px solid #ffce54;
+        padding: 8px;
+
+        &-body * {
+            color: rgba(220, 220, 221, 0.8);
+
+        }
     }
 }

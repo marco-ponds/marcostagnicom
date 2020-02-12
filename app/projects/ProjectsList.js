@@ -9,10 +9,10 @@ const PROJECTS = [
         description: 'A* pathfinding demo realised with mage engine.'
     },
     {
-        name: 'Pathfinding demo',
-        url: 'http://pathfinding.marcostagni.now.sh',
+        name: 'Conway\'s Game of Life',
+        url: 'https://codepen.io/marco-ponds/pen/rzjpwg',
         cover: './static/images/pathfinding.png',
-        description: 'A* pathfinding demo realised with mage engine.'
+        description: 'A HTML implementation of Conway\'s Game of Life'
     },
     {
         name: 'Pathfinding demo',
