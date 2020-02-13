@@ -46,4 +46,32 @@
 
         }
     }
+
+    & .projects-links {
+        margin: 32px 0px;
+        padding: 0;
+
+        & .link {
+            list-style: none;
+            float: left;
+            height: auto;
+            width: auto;
+            padding: 4px;
+            margin-right: 16px;
+            font-size: 18px;
+
+            &:hover,
+            &:focus,
+            &:active {
+
+                & a {
+                    color: #ffce54;
+                }
+
+                & svg {
+                    fill: #ffce54;
+                }
+            }
+        }
+    }
 }

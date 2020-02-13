@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from 'antd';
 
 export default () => (
     <p className='projects-details-container'>
@@ -6,11 +7,13 @@ export default () => (
             Personal projects
         </h1>
         <span className='projects-details-description'>
-            Feel free to drop me a message, I promise you I will find the time to read and reply every time.
-            In the meanwhile, here are all the other platforms where you can find me:
+            I spend most of my free time developing personal projects. They're not strictly related to my daily job,
+            but they allow me to explore what JS can (and can't) do.
+            Most of my projects are hosted on Codepen or Now, and their source code is available on Github.
         </span>
-        <ul>
-            TI MANCANO DESCRIZIONI E LINK A GITHUB E CODEPEN
+        <ul className='projects-links'>
+            <li className='link'><a href='http://github.com/marco-ponds'><Icon type="github"/> Github</a></li>
+            <li className='link'><a href='https://codepen.io/marco-ponds'><Icon type="codepen"/> Codepen</a></li>
         </ul>
     </p>
 );

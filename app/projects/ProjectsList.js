@@ -6,13 +6,13 @@ const PROJECTS = [
         name: 'Pathfinding demo',
         url: 'http://pathfinding.marcostagni.now.sh',
         cover: './static/images/pathfinding.png',
-        description: 'A* pathfinding demo realised with mage engine.'
+        description: 'JS, CSS with Mage Engine'
     },
     {
         name: 'Conway\'s Game of Life',
         url: 'https://codepen.io/marco-ponds/pen/rzjpwg',
-        cover: './static/images/pathfinding.png',
-        description: 'A HTML implementation of Conway\'s Game of Life'
+        cover: './static/images/conway.png',
+        description: 'Vanilla JS, CSS'
     },
     {
         name: 'Pathfinding demo',
