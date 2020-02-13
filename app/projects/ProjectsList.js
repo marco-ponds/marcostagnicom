@@ -1,30 +1,19 @@
 import React from 'react';
 import ProjectItem from './ProjectItem';
+import {ES6, MAGEENGINE, SASS} from '../work/constants';
 
 const PROJECTS = [
     {
         name: 'Pathfinding demo',
         url: 'http://pathfinding.marcostagni.now.sh',
         cover: './static/images/pathfinding.png',
-        description: 'JS, CSS with Mage Engine'
+        technologies: [ES6, SASS, MAGEENGINE]
     },
     {
         name: 'Conway\'s Game of Life',
         url: 'https://codepen.io/marco-ponds/pen/rzjpwg',
         cover: './static/images/conway.png',
-        description: 'Vanilla JS, CSS'
-    },
-    {
-        name: 'Pathfinding demo',
-        url: 'http://pathfinding.marcostagni.now.sh',
-        cover: './static/images/pathfinding.png',
-        description: 'A* pathfinding demo realised with mage engine.'
-    },
-    {
-        name: 'Pathfinding demo',
-        url: 'http://pathfinding.marcostagni.now.sh',
-        cover: './static/images/pathfinding.png',
-        description: 'A* pathfinding demo realised with mage engine.'
+        technologies: [ES6, SASS]
     }
 ]
 

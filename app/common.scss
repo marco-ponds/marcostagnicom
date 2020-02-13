@@ -1,0 +1,33 @@
+.technologies-tags {
+    padding-top: 32px;
+
+    .ant-tag {
+        background: transparent !important;
+        margin-bottom: 8px;
+
+        &.framework {
+            color: #2ecc71;
+            border: 1px solid #2ecc71;
+        }
+
+        &.tool {
+            color: #3498db;
+            border: 1px solid #3498db;
+        }
+
+        &.language {
+            color: #ecf0f1;
+            border: 1px solid #ecf0f1;
+        }
+
+        &.cicd {
+            color: #ffce54;
+            border: 1px solid #ffce54;
+        }
+
+        &.editor {
+            color: #8e44ad;
+            border: 1px solid #8e44ad;
+        }
+    }
+}

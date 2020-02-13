@@ -1,5 +1,20 @@
 import React from 'react';
-import { Timeline } from 'antd';
+import { Timeline, Tag } from 'antd';
+import {
+    BABEL,
+    ROLLUP,
+    WEBPACK,
+    ES6,
+    HAPIJS,
+    SASS,
+    NODEJS,
+    GOCD,
+    AWS,
+    BACKBONEJS,
+    REACT,
+    JAVA,
+    JENKINS
+} from './constants';
 
 const { Item } = Timeline;
 
@@ -11,7 +26,8 @@ const experiences = [
         company: 'Elsevier',
         description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque\n' +
             'laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto\n' +
-            'beatae vitae dicta sunt explicabo.'
+            'beatae vitae dicta sunt explicabo.',
+        technologies: [BABEL, ROLLUP, WEBPACK, REACT, ES6, SASS, NODEJS, JAVA, HAPIJS, AWS, GOCD]
     },
     {
         current: false,
@@ -20,7 +36,8 @@ const experiences = [
         company: 'Elsevier',
         description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque\n' +
             'laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto\n' +
-            'beatae vitae dicta sunt explicabo.'
+            'beatae vitae dicta sunt explicabo.',
+        technologies: [BABEL, ROLLUP, WEBPACK, REACT, ES6, SASS, NODEJS, JAVA, HAPIJS, AWS, GOCD]
     },
     {
         current: false,
@@ -29,7 +46,8 @@ const experiences = [
         company: 'Workshare',
         description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque\n' +
             'laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto\n' +
-            'beatae vitae dicta sunt explicabo.'
+            'beatae vitae dicta sunt explicabo.',
+        technologies: [BABEL, WEBPACK, ES6, SASS, NODEJS, JAVA, REACT, BACKBONEJS, JENKINS]
     },
     {
         current: false,
@@ -38,7 +56,8 @@ const experiences = [
         company: 'Expert System SPA',
         description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque\n' +
             'laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto\n' +
-            'beatae vitae dicta sunt explicabo.'
+            'beatae vitae dicta sunt explicabo.',
+        technologies: [ES6, SASS, NODEJS]
     },
     {
         current: false,
@@ -47,11 +66,18 @@ const experiences = [
         company: 'Playwear - Moovi',
         description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque\n' +
             'laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto\n' +
-            'beatae vitae dicta sunt explicabo.'
+            'beatae vitae dicta sunt explicabo.',
+        technologies: [ES6, SASS, NODEJS, JAVA]
     }
 ];
 
-const getWorkExperience = ({ current, position, date, company, description }) => (
+const getTechnologiesTags = (technologies) => (
+    technologies.map(({ type, name }) => (
+        <Tag className={type}>{name}</Tag>
+    ))
+);
+
+const getWorkExperience = ({ current, position, date, company, description, technologies}) => (
     <Item color={current ? "green" : "white"}>
         <div className="work-experience">
             <p
@@ -64,6 +90,9 @@ const getWorkExperience = ({ current, position, date, company, description }) =>
             <p className="work-description">
                 { description }
             </p>
+            <div className='technologies-tags'>
+                { getTechnologiesTags(technologies) }
+            </div>
         </div>
     </Item>
 );
