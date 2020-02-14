@@ -1,25 +1,17 @@
 import React from 'react';
 import Layout from '../app/Layout';
-import FormComponent from '../app/FormComponent';
+import Contacts from '../app/contacts/Contacts';
 import GoogleAnalytics from '../app/GoogleAnalytics';
+
 import "antd/dist/antd.min.css";
 
-class Whoami extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <React.Fragment>
-                <GoogleAnalytics/>
-                <Layout>
-                    <FormComponent/>
-                </Layout>
-            </React.Fragment>
-        )
-    }
-}
-
-export default Whoami;
+export default () => (
+    <React.Fragment>
+        <GoogleAnalytics />
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
+        <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer/>
+        <Layout currentPage='contacts'>
+            <Contacts/>
+        </Layout>
+    </React.Fragment>
+);

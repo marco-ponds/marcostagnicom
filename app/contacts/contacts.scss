@@ -1,0 +1,98 @@
+@import '../mixins';
+
+.contacts {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    overflow: hidden;
+
+    @include responsive;
+
+    & * {
+        color: #dcdcdd;
+    }
+
+    & h1 {
+        font-weight: bold;
+        font-size: 2.5em;
+        color: #ffce54;
+    }
+
+    & .contacts-details-container,
+    & .contacts-form-container {
+        color: #dcdcdd;
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        padding: 100px 0 32px 0;
+        float: left;
+    }
+
+    & .contacts-details-container {
+        padding-right: 64px;
+    }
+
+    & .contacts-linkedin-badge {
+
+        margin-top: 24px;
+
+        & .LI-badge-container {
+            width: 100% !important;
+            top: 24px;
+            position: relative;
+        }
+    }
+
+    & .contacts-links {
+        margin: 32px 0px;
+        padding: 0;
+
+        & .link {
+            list-style: none;
+            float: left;
+            height: auto;
+            width: auto;
+            padding: 4px;
+            margin-right: 16px;
+            font-size: 24px;
+
+            &:hover svg {
+                fill: #ffce54;
+            }
+        }
+    }
+
+
+    & .contacts-form {
+        padding: 52px;
+        background: rgba(24, 24, 24, 0.5);
+
+        & * {
+            font-family: Montserrat;
+        }
+
+        & .contacts-input {
+            margin-bottom: 42px;
+            background: transparent;
+            color: #dcdcdd !important;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid rgba(255, 206, 84, .4);
+            border-left: 1px solid rgba(255, 206, 84, .4);
+        }
+
+        & .contacts-button {
+            border: 1px solid #ffce54;
+
+            & span {
+                font-weight: 100;
+                color: #ffce54;
+            }
+
+            &:hover {
+                background: rgba(255, 206, 84, .1) !important;
+            }
+        }
+    }
+}

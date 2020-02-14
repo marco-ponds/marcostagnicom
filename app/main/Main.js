@@ -1,9 +1,9 @@
 import React from 'react';
-import Console from './Console';
+import Whoami from './Whoami';
 
 const Main = (props) => (
     <main>
-        <Console />
+        <Whoami/>
     </main>
 );
 

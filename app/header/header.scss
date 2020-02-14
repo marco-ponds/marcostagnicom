@@ -1,3 +1,4 @@
+@import '../constants';
 
 header {
     width: 100%;
@@ -11,7 +12,6 @@ header {
     font-size: 52px;
     width: auto;
     float: left;
-    margin-left: 13px;
 
     & a {
         color: #dcdcdd !important;
@@ -38,6 +38,13 @@ header {
     line-height: 80px;
     float: right;
 
+    border-right: 1px solid #ffce54;
+    border-top: 1px solid #ffce54;
+
+    @media(max-width: $LARGE) {
+        display: none;
+    }
+
     & li {
         list-style: none;
         float: left;
@@ -53,6 +60,10 @@ header {
             color: inherit;
             height: inherit;
             display: block;
+
+            &.current {
+                color: #ffce54;
+            }
         }
 
         &:last-child {
