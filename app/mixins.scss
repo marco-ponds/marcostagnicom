@@ -12,7 +12,7 @@
 }
 
 @mixin responsive {
-    @media(max-width: $LARGE) {
+    @media screen and (max-width: $LARGE) {
         overflow-y: auto;
         height: 100%;
 
