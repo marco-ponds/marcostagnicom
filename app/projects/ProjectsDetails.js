@@ -1,6 +1,9 @@
 import React from 'react';
 import { Icon } from 'antd';
 
+const codepen = 'https://codepen.io/marco-ponds';
+const github = 'http://github.com/marco-ponds';
+
 export default () => (
     <p className='projects-details-container'>
         <h1>
@@ -12,8 +15,16 @@ export default () => (
             Most of my projects are hosted on Codepen or Now, and their source code is available on Github.
         </span>
         <ul className='projects-links'>
-            <li className='link'><a href='http://github.com/marco-ponds'><Icon type="github"/> Github</a></li>
-            <li className='link'><a href='https://codepen.io/marco-ponds'><Icon type="codepen"/> Codepen</a></li>
+            <li className='link'>
+                <a target='_blank' href={github}>
+                    <Icon type="github"/> Github
+                </a>
+            </li>
+            <li className='link'>
+                <a target='_blank' href={codepen}>
+                    <Icon type="codepen"/> Codepen
+                </a>
+            </li>
         </ul>
     </p>
 );

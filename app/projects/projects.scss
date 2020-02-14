@@ -8,6 +8,8 @@
     font-weight: 100;
     letter-spacing: 1px;
 
+    @include responsive;
+
     & * {
         color: #dcdcdd;
     }
@@ -44,7 +46,10 @@
 
         &-body * {
             color: rgba(220, 220, 221, 0.8);
+        }
 
+        & .technologies-tags {
+            padding: 0;
         }
     }
 

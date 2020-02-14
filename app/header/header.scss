@@ -1,3 +1,4 @@
+@import '../constants';
 
 header {
     width: 100%;
@@ -39,6 +40,10 @@ header {
 
     border-right: 1px solid #ffce54;
     border-top: 1px solid #ffce54;
+
+    @media(max-width: $LARGE) {
+        display: none;
+    }
 
     & li {
         list-style: none;

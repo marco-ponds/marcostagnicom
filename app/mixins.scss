@@ -1,14 +1,28 @@
+@import './constants';
+
 @mixin dark-scrollbar {
     &::-webkit-scrollbar {
         width: 1em;
     }
 
-    &::-webkit-scrollbar-track {
-        //box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    }
-
     &::-webkit-scrollbar-thumb {
         background-color: rgba(24, 24, 24, 1);;
         outline: 1px solid rgba(24, 24, 24, 1);;
+    }
+}
+
+@mixin responsive {
+    @media(max-width: $LARGE) {
+        overflow-y: auto;
+        height: 100%;
+
+        @include dark-scrollbar;
+
+        [class$=-container] {
+            width: 100% !important;
+            height: auto !important;
+            padding-right: 0px !important;
+            clear: both;
+        }
     }
 }

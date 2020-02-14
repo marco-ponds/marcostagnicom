@@ -1,3 +1,5 @@
+@import './constants';
+
 /* cyrillic-ext */
 @font-face {
     font-family: 'Montserrat';
@@ -134,11 +136,6 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-$X-LARGE: 1024px;
-$LARGE: 800px;
-$MEDIUM: 524px;
-$SMALL: 430px;
-
 body {
     background: #1d1d1d !important;
     color: #dcdcdd !important;
@@ -185,7 +182,7 @@ body {
     & h3 {
         font-weight: bold;
         color: rgba(255, 206, 84, .4);
-        font-size: 1.8em;
+        font-size: 1.6em;
         margin: 0;
     }
 
@@ -193,15 +190,10 @@ body {
         display: block;
         font-weight: 100;
         font-size: .7em;
-        width: 900px;
+        width: 90%;
         position: relative;
         top: 100px;
     }
-
-    //& .position {
-    //    position: relative;
-    //    top: 42px;
-    //}
 
     & .jobtitle {
         color: rgba(255, 206, 84, 1);
@@ -211,27 +203,46 @@ body {
 @media(max-width: $X-LARGE) {
 
     .whoami {
-        font-size: 12px;
+        font-size: 28px;
         padding: 100px 32px 32px 32px;
+
+        & .description {
+            width: 100%;
+        }
     }
 }
 
 @media(max-width: $LARGE) {
 
     .whoami {
-        font-size: 12px;
+        font-size: 20px;
+
+        & .description {
+            width: 100%;
+            font-size: 20px;
+        }
     }
 }
 
 @media(max-width: $MEDIUM) {
     .whoami {
-        font-size: 10em;
+        font-size: 18px;
+
+        & .description {
+            font-size: 18px;
+            width: 100%;
+        }
     }
 }
 
 @media(max-width: $SMALL) {
     .whoami {
-        font-size: 2em;
+        font-size: 16px;
+
+        & .description {
+            font-size: 16px;
+            width: 100%;
+        }
     }
 }
 

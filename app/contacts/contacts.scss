@@ -1,9 +1,13 @@
+@import '../mixins';
+
 .contacts {
     width: 100%;
     font-size: 16px;
     font-weight: 100;
     letter-spacing: 1px;
     overflow: hidden;
+
+    @include responsive;
 
     & * {
         color: #dcdcdd;
@@ -30,10 +34,11 @@
     }
 
     & .contacts-linkedin-badge {
+
+        margin-top: 24px;
+
         & .LI-badge-container {
             width: 100% !important;
-            /* left: calc(50% - 170px); */
-            /* margin: 24px; */
             top: 24px;
             position: relative;
         }

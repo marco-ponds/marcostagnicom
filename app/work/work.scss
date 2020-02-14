@@ -8,6 +8,8 @@
     font-weight: 100;
     letter-spacing: 1px;
 
+    @include responsive;
+
     & * {
         color: #dcdcdd;
     }
@@ -28,7 +30,7 @@
     }
 }
 
-.work-experience-timeline {
+.work-experience-timeline-container {
     width: 50%;
     height: 100%;
     margin: 0;
