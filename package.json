@@ -11,6 +11,7 @@
     "production": "npm run build && npm start",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:update-snapshots": "jest --updateSnapshot",
     "test:coverage": "jest --coverage --colors"
   },
   "repository": {
