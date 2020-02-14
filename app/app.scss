@@ -205,9 +205,10 @@ body {
 
     .whoami {
         font-size: 28px;
-        padding: 100px 32px 32px 32px;
+        padding: 10% 32px 32px 32px;
 
         & .description {
+            top: 70px;
             width: 100%;
         }
     }
@@ -217,9 +218,11 @@ body {
 
     .whoami {
         font-size: 20px;
+        padding: 10% 32px 32px 32px;
 
         & .description {
             width: 100%;
+            top: 70px;
             font-size: 20px;
         }
     }
@@ -228,9 +231,11 @@ body {
 @media(max-width: $MEDIUM) {
     .whoami {
         font-size: 18px;
+        padding: 0px 32px 32px 32px;
 
         & .description {
-            font-size: 18px;
+            font-size: 16px;
+            top: 10vh;
             width: 100%;
         }
     }
@@ -239,9 +244,11 @@ body {
 @media(max-width: $SMALL) {
     .whoami {
         font-size: 16px;
+        padding: 0px 32px 32px 32px;
 
         & .description {
-            font-size: 16px;
+            font-size: 14px;
+            top: 5vh;
             width: 100%;
         }
     }
