@@ -97,13 +97,11 @@ header {
     }
 
     .menu {
-        opacity: 0;
-        transition: opacity 0.3s;
+        display: none;
 
         &:target {
             overflow: hidden;
             position: absolute;
-            opacity: 1;
             height: 100%;
             width: 100%;
             display: block;
