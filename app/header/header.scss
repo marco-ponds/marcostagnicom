@@ -41,10 +41,6 @@ header {
     border-right: 1px solid #ffce54;
     border-top: 1px solid #ffce54;
 
-    @media(max-width: $LARGE) {
-        display: none;
-    }
-
     & li {
         list-style: none;
         float: left;
@@ -74,6 +70,72 @@ header {
         &:hover {
             border-bottom: 2px solid #ffce54;
             cursor: pointer;
+        }
+    }
+}
+
+.menu-toggle-button,
+.menu-close-button {
+    display: none;
+}
+
+@media screen and (max-width: $LARGE) {
+
+    .menu-toggle-button,
+    .menu-close-button {
+        display: block;
+        font-size: 24px;
+        color: #dcdcdd;
+    }
+
+    .menu-toggle-button {
+        position: absolute;
+
+        top: 16px;
+        right: 16px;
+        z-index: 1;
+    }
+
+    .menu {
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        &:target {
+            overflow: hidden;
+            position: absolute;
+            opacity: 1;
+            height: 100%;
+            width: 100%;
+            display: block;
+            background: #181818;
+            color: #dcdcdd;
+            border: 1px solid #ffce54;
+            z-index: 999;
+            margin: 1px;
+            padding: 0;
+
+            & li {
+                width: 100%;
+                clear: both;
+                height: calc(100% / 6);
+
+                & a {
+                    text-align: center;
+                    line-height: 100px;
+                    height: 100%;
+                    font-size: 24px;
+                }
+
+                &:last-child {
+                    margin-right: 0px;
+                }
+
+                &:active,
+                &:hover {
+                    border-bottom: none;
+                    cursor: pointer;
+                }
+            }
         }
     }
 }
