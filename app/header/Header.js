@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from 'antd';
 
 import './header.scss';
 
@@ -19,19 +20,37 @@ const getLink = (currentPage, title) => {
     </a>;
 }
 
+const ToggleMenu = () => (
+    <a id="menu-toggle" class="menu-toggle-button" href="#menu">
+        <Icon type="menu"/>
+    </a>
+);
+
+const CloseMenu = () => (
+    <a href='#menu-toggle'>
+        <Icon type="close"/>
+    </a>
+);
+
+const Title = (currentPage) => (
+    <span className="title">
+        { getLink(currentPage, 'Marco') }
+    </span>
+);
+
 const Header = ({ homepage = true, currentPage }) => (
     <header>
-        { !homepage &&
-            <span className="title">
-                { getLink(currentPage, 'Marco') }
-            </span>
-        }
-        <ul className="menu">
+        { !homepage && <Title currentPage={currentPage}/> }
+        <ToggleMenu/>
+        <ul id='menu' className="menu">
             <li>{ getLink(currentPage, 'resume') }</li>
             <li>{ getLink(currentPage, 'work') }</li>
             <li>{ getLink(currentPage, 'projects') }</li>
             <li>{ getLink(currentPage, 'blog') }</li>
             <li>{ getLink(currentPage, 'contacts') }</li>
+            <li className='menu-close-button'>
+                <CloseMenu/>
+            </li>
         </ul>
     </header>
 );
