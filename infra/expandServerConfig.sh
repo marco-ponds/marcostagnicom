@@ -8,3 +8,5 @@ JSON_STRING='{
 }'
 
 echo $JSON_STRING > server/config.json
+
+cat server/config.json
