@@ -1,8 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api');
-const TELEGRAM_TOKEN = require('./constants').TELEGRAM_TOKEN;
-const CHAT_ID = 17894631;
-
-console.log(process.env.TELEGRAM_TOKEN);
+const config = require('./config.json');
+const TELEGRAM_TOKEN = config.TELEGRAM_TOKEN;
+const TELEGRAM_CHAT_ID = config.TELEGRAM_CHAT_ID;
 
 let bot;
 
@@ -17,9 +16,9 @@ const start = function() {
 }
 
 const sendMessage = function (payload) {
-    if (bot && CHAT_ID) {
+    if (bot && TELEGRAM_CHAT_ID) {
         const message = JSON.stringify(payload);
-        bot.sendMessage(CHAT_ID, message);
+        bot.sendMessage(TELEGRAM_CHAT_ID, message);
         return true;
     }
     return false;
