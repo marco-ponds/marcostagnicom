@@ -31,6 +31,9 @@ jobs:
                 name: remove dev dependencies
                 command: rm -rf node_modules
             - run:
+                name: create server configuration
+                command: sh infra/expandServerConfig.sh
+            - run:
                 name: "Zip"
                 command: |
                     mkdir build
@@ -90,7 +93,7 @@ jobs:
                         find . -mindepth 1 -delete
                         curl -O -J -L https://github.com/marco-ponds/$APP_NAME/releases/download/$BUILD_VERSION/app.zip &&
                         unzip -o app.zip
-                        sh infra/expandServerConfig.sh
+                        cat server/config.json
                         sh infra/deploy.sh"
 
 workflows:
