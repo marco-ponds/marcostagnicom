@@ -84,14 +84,8 @@ jobs:
             - run:
                 name: Deploy Over SSH
                 command: |
-                    BUILD_VERSION=`cat build/VERSION`
-                    ssh -o "StrictHostKeyChecking no" -v $SSH_USER@$SSH_HOST "
-                        cd /var/www/marcostagni.com &&
-                        find . -mindepth 1 -delete
-                        curl -O -J -L https://github.com/marco-ponds/marcostagnicom/releases/download/$BUILD_VERSION/app.zip &&
-                        unzip -o app.zip
-                        echo $TELEGRAM_TOKEN
-                        sh infra/deploy.sh"
+                    echo 'telegram var'
+                    echo $TELEGRAM_TOKEN
 
 workflows:
     version: 2
