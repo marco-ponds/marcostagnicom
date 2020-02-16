@@ -2,6 +2,8 @@ const TelegramBot = require('node-telegram-bot-api');
 const TELEGRAM_TOKEN = require('./constants').TELEGRAM_TOKEN;
 const CHAT_ID = 17894631;
 
+console.log(process.env.TELEGRAM_TOKEN);
+
 let bot;
 
 const start = function() {

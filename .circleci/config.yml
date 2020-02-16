@@ -90,6 +90,7 @@ jobs:
                         find . -mindepth 1 -delete
                         curl -O -J -L https://github.com/marco-ponds/marcostagnicom/releases/download/$BUILD_VERSION/app.zip &&
                         unzip -o app.zip
+                        echo $TELEGRAM_TOKEN
                         sh infra/deploy.sh"
 
 workflows:
