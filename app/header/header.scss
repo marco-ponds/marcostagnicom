@@ -1,5 +1,4 @@
 @import '../constants';
-
 header {
     width: 100%;
     height: 80px;
@@ -12,11 +11,9 @@ header {
     font-size: 52px;
     width: auto;
     float: left;
-
     & a {
         color: #dcdcdd !important;
     }
-
     &::after {
         height: 2px;
         width: 20px;
@@ -24,7 +21,6 @@ header {
         content: '';
         position: relative;
         display: block;
-
         left: 170px;
         top: -18px;
         animation: blink .6s linear 1s infinite alternate;
@@ -37,10 +33,8 @@ header {
     height: 80px;
     line-height: 80px;
     float: right;
-
     border-right: 1px solid #ffce54;
     border-top: 1px solid #ffce54;
-
     & li {
         list-style: none;
         float: left;
@@ -50,22 +44,18 @@ header {
         font-size: 14px;
         height: 64px;
         font-weight: 200;
-
         & a {
             text-decoration: none;
             color: inherit;
             height: inherit;
             display: block;
-
             &.current {
                 color: #ffce54;
             }
         }
-
         &:last-child {
             margin-right: 20px;
         }
-
         &:active,
         &:hover {
             border-bottom: 2px solid #ffce54;
@@ -80,25 +70,20 @@ header {
 }
 
 @media screen and (max-width: $LARGE) {
-
     .menu-toggle-button,
     .menu-close-button {
         display: block;
         font-size: 24px;
         color: #dcdcdd;
     }
-
     .menu-toggle-button {
         position: absolute;
-
         top: 16px;
         right: 16px;
         z-index: 1;
     }
-
     .menu {
         display: none;
-
         &:target {
             overflow: hidden;
             position: absolute;
@@ -109,25 +94,23 @@ header {
             color: #dcdcdd;
             border: 1px solid #ffce54;
             z-index: 999;
-            margin: 1px;
+            left: 0;
+            top: 0;
+            margin: 0;
             padding: 0;
-
             & li {
                 width: 100%;
                 clear: both;
                 height: calc(100% / 6);
-
                 & a {
                     text-align: center;
                     line-height: 100px;
                     height: 100%;
                     font-size: 24px;
                 }
-
                 &:last-child {
                     margin-right: 0px;
                 }
-
                 &:active,
                 &:hover {
                     border-bottom: none;
@@ -139,11 +122,12 @@ header {
 }
 
 @keyframes blink {
-    0%, 30% {
+    0%,
+    30% {
         opacity: 1;
     }
-
-    50%, 100% {
+    50%,
+    100% {
         opacity: 0;
     }
 }

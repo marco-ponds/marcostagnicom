@@ -21,7 +21,7 @@ const getLink = (currentPage, title) => {
 }
 
 const ToggleMenu = () => (
-    <a id="menu-toggle" class="menu-toggle-button" href="#menu">
+    <a id="menu-toggle" className="menu-toggle-button" href="#menu">
         <Icon type="menu"/>
     </a>
 );
