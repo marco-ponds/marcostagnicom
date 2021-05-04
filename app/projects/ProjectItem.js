@@ -4,7 +4,7 @@ import {Card, Icon, Tag} from 'antd';
 const { Meta } = Card;
 
 const getMetaTitle = (title, url) => (
-    <a href={url}>{title}</a>
+    <a href={url} target='_blank'>{title}</a>
 );
 
 const getTechnologiesTags = (technologies) => {

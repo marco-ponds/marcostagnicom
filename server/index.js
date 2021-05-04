@@ -38,10 +38,12 @@ const isValidPayload = function(payload) {
         .length === 0;
 }
 
+const isProd = () => process.env.NODE_ENV === 'production';
+
 const onMail = function(req, res) {
     const payload = req.body;
 
-    if (isValidPayload(payload)) {
+    if (isValidPayload(payload) && isProd()) {
         telegram.sendMessage(payload);
     }
 
@@ -49,7 +51,9 @@ const onMail = function(req, res) {
 };
 
 const setupServer = function() {
-    telegram.start();
+    if (isProd()) {
+        telegram.start();
+    }
 
     server.get('/resume', onResume);
     server.post('/email', onMail);

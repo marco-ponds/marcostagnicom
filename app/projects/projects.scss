@@ -1,25 +1,20 @@
 @import '../mixins';
 @import '../common';
-
 .projects {
     width: 100%;
     height: 100%;
     font-size: 16px;
     font-weight: 100;
     letter-spacing: 1px;
-
     @include responsive;
-
     & * {
         color: #dcdcdd;
     }
-
     & h1 {
         font-weight: bold;
         font-size: 2.5em;
         color: #ffce54;
     }
-
     & .projects-details-container,
     & .projects-list-container {
         color: #dcdcdd;
@@ -29,34 +24,27 @@
         padding: 100px 64px 32px 0;
         float: left;
     }
-
     & .projects-list-container {
         overflow-y: auto;
         @include dark-scrollbar;
     }
-
     & .ant-card {
-        position: relative;
-        float: left;
+        display: inline-block;
         width: 250px !important;
         margin: 16px;
         background: transparent;
         border: 1px solid #ffce54;
         padding: 8px;
-
         &-body * {
             color: rgba(220, 220, 221, 0.8);
         }
-
         & .technologies-tags {
             padding: 0;
         }
     }
-
     & .projects-links {
         margin: 32px 0px;
         padding: 0;
-
         & .link {
             list-style: none;
             float: left;
@@ -65,15 +53,12 @@
             padding: 4px;
             margin-right: 16px;
             font-size: 18px;
-
             &:hover,
             &:focus,
             &:active {
-
                 & a {
                     color: #ffce54;
                 }
-
                 & svg {
                     fill: #ffce54;
                 }

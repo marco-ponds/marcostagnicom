@@ -7,7 +7,7 @@ const Footer = () => (
     <footer>
         Built with <img className="zeit" src="/static/images/zeit-white-full-logo.svg" />
         <span className="copyright">
-            <Icon type="copyright" /> 2020, Marco Stagni
+            <Icon type="copyright" /> 2021, Marco Stagni
         </span>
     </footer>
 );
